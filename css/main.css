@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h1,
@@ -1113,7 +1113,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 40px;
   color: #fff;
-  background: #222;
+/*background: $brand-bg;*/
   border-bottom: none;
 }
 .brand:hover {
@@ -1185,9 +1185,14 @@ pre .javascript .function {
   }
 }
 .menu {
-  margin-top: 20px;
+/*margin-top: 20px;
   padding-left: 0;
-  text-align: center;
+  text-align: center;*/
+  background: rgba(255,255,255,0.65);
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  border-radius: initial;
 }
 .menu .menu-item {
   display: inline-block;
@@ -1237,7 +1242,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1641,6 +1646,126 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+#rewardButton {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  letter-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+}
+#rewardButton span {
+  display: inline-block;
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  font-stretch: normal;
+  font-size: 18px;
+  font-family: "Microsoft Yahei";
+  background: #f44336;
+}
+#rewardButton span:hover {
+  background: #f7877f;
+}
+#QR {
+  padding-top: 20px;
+}
+#QR a {
+  border: 0;
+}
+#QR img {
+  width: 180px;
+  max-width: 100%;
+  display: inline-block;
+  margin: 0.8em 2em 0 2em;
+}
+#wechat:hover p {
+  animation: roll 0.1s infinite linear;
+  -webkit-animation: roll 0.1s infinite linear;
+  -moz-animation: roll 0.1s infinite linear;
+}
+#alipay:hover p {
+  animation: roll 0.1s infinite linear;
+  -webkit-animation: roll 0.1s infinite linear;
+  -moz-animation: roll 0.1s infinite linear;
+}
+#bitcoin:hover p {
+  animation: roll 0.1s infinite linear;
+  -webkit-animation: roll 0.1s infinite linear;
+  -moz-animation: roll 0.1s infinite linear;
+}
+@-moz-keyframes roll {
+  from {
+    -webkit-transform: rotateZ(30deg);
+    -moz-transform: rotateZ(30deg);
+    -ms-transform: rotateZ(30deg);
+    -o-transform: rotateZ(30deg);
+    transform: rotateZ(30deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-30deg);
+    -moz-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -o-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }
+}
+@-webkit-keyframes roll {
+  from {
+    -webkit-transform: rotateZ(30deg);
+    -moz-transform: rotateZ(30deg);
+    -ms-transform: rotateZ(30deg);
+    -o-transform: rotateZ(30deg);
+    transform: rotateZ(30deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-30deg);
+    -moz-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -o-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }
+}
+@-o-keyframes roll {
+  from {
+    -webkit-transform: rotateZ(30deg);
+    -moz-transform: rotateZ(30deg);
+    -ms-transform: rotateZ(30deg);
+    -o-transform: rotateZ(30deg);
+    transform: rotateZ(30deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-30deg);
+    -moz-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -o-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }
+}
+@keyframes roll {
+  from {
+    -webkit-transform: rotateZ(30deg);
+    -moz-transform: rotateZ(30deg);
+    -ms-transform: rotateZ(30deg);
+    -o-transform: rotateZ(30deg);
+    transform: rotateZ(30deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-30deg);
+    -moz-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -o-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }
+}
 .rtl.post-body p,
 .rtl.post-body a,
 .rtl.post-body h1,
@@ -1657,6 +1782,16 @@ pre .javascript .function {
 }
 .rtl.post-title {
   font-family: UKIJ Ekran;
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
 }
 .sidebar {
   position: fixed;
@@ -1822,7 +1957,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bf66f9;
+  background: #ff2aff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2207,6 +2342,19 @@ pre .javascript .function {
 .theme-next .this_ua.browser.QQBrowser {
   background-color: #78ace9 !important;
   border-color: #4cae4c !important;
+}
+#gitment-display-button {
+  display: inline-block;
+  padding: 0 15px;
+  color: #0a9caf;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid #0a9caf;
+  border-radius: 4px;
+}
+#gitment-display-button:hover {
+  color: #fff;
+  background: #0a9caf;
 }
 .post-spread {
   margin-top: 20px;
@@ -2659,4 +2807,18 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+body {
+  background: url("/images/back-img2.png") center 0 no-repeat;
+  background-size: cover !important;
+/* background-position:50% 50%;*/
+  background-attachment: fixed;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #fff;
+  opacity: 0.8;
+  min-height: 500px;
+/* clip:rect(0px,60px,200px,0px);*/
 }
