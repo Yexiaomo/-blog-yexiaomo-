@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: BLOG
+title: BLOG-Yexiaomo
 subtitle: Love is the beauty of the soul.
-description: It isn't where you came from. It's where you're going where.
+description: 
 keywords:
 author: Yexiaomo
 language: zh-Hans
@@ -76,11 +76,11 @@ pagination_dir: page
 theme: next
 
 # add Local Search keshan
-#search:
-#  path: search.xml
-#  field: post
-#  format: html
-#  limit: 10000
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
