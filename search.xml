@@ -2,8 +2,8 @@
 <search>
   <entry>
     <title><![CDATA[设置开机自启动,定时执行"Git Pull"python脚本]]></title>
-    <url>%2FSet_autoGitPull_script%2F2018%2F06%2F23%2F</url>
-    <content type="text"><![CDATA[The file github address! This is teach you Set boot auto start and timing execute “git pull” python-Script Set_autoGitPull_script以下均是在root用户下操作,步骤如下: 创建脚本和日志文件,这里是将脚本放在仓库下,脚本代码如下: 12345678#!/usr/bin/python3.5import osos.chdir('/var/www/mysite/')os.system('date &gt;&gt; autoGitPull.log')os.system('sudo git pull origin master')os.chdir('/var/www/mysite/blog-yexiaomo/')os.system('sudo hexo clean')os.system('sudo hexo d -g') 对文件进行修改权限 chomd +x autoGitPull.py 设定开机自运行vim /etc/rc.local在末尾添加 1/usr/bin/python3.5 /var/www/mysite/autoGitPull.py &gt; /var/www/mysite/autoGitPull.log 设置定时运行 第一种方法执行crontab -e末尾添加 133 3 * * * sudo /usr/bin/python3.5 /var/www/mysite/autoGitPull.py &gt;&gt; /var/www/mysite/autoGitPull.log &amp; 第二种方法(好像不行)vim /etc/crontab末尾添加 133 3 * * * sudo /usr/bin/python3.5 /var/www/mysite/autoGitPull.py &gt;&gt; /var/www/mysite/autoGitPull.log 不要忘了重启服务 service cron restart]]></content>
+    <url>%2FSet_autoGitPull_script%2F2018%2F06%2F26%2F</url>
+    <content type="text"><![CDATA[The file github address! This is teach you Set boot auto start and timing execute “git pull” python-Script 以下均是在root用户下操作,步骤如下: Set_autoGitPull_script 创建脚本和日志文件,这里是将脚本放在仓库下,脚本代码如下: 123456#!/usr/bin/python3.5import osos.chdir('/var/www/blog-yexiaomo/')os.system('date &gt;&gt; autoGitPull.log')os.system('sudo git pull origin master')os.system('sudo hexo clean &amp;&amp; sudo hexo d -g') 对文件进行修改权限 chomd +x autoGitPull.py 3. 设定开机自运行vim /etc/rc.local在末尾添加1/usr/bin/python3.5 /var/www/mysite/autoGitPull.py &gt; /var/www/mysite/autoGitPull.log 设置定时运行 第一种方法执行crontab -e末尾添加133 3 * * * sudo /usr/bin/python3.5 /var/www/mysite/autoGitPull.py &gt;&gt; /var/www/mysite/autoGitPull.log &amp; 第二种方法(好像不行)vim /etc/crontab末尾添加 133 3 * * * sudo /usr/bin/python3.5 /var/www/mysite/autoGitPull.py &gt;&gt; /var/www/mysite/autoGitPull.log 不要忘了重启服务 service cron restart]]></content>
       <categories>
         <category>linux</category>
       </categories>
