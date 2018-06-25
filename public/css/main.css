@@ -180,7 +180,7 @@ th {
   padding: 0;
 }
 ::selection {
-  background: #262a30;
+  background: #338fff;
   color: #fff;
 }
 body {
@@ -1957,7 +1957,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2aff;
+  background: #5cfffc;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2809,7 +2809,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("/images/back-img2.png") center 0 no-repeat;
+  background: url("/images/back-img3.png") center 0 no-repeat;
   background-size: cover !important;
 /* background-position:50% 50%;*/
   background-attachment: fixed;
