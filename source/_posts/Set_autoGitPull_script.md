@@ -20,7 +20,7 @@ os.system('sudo hexo clean && sudo hexo d -g')
 ```
 2. 对文件进行修改权限 `chomd +x autoGitPull.py`
 
-~3. 设定开机自运行`vim /etc/rc.local`在末尾添加~
+<del>3. 设定开机自运行`vim /etc/rc.local`在末尾添加</del>
 ```python
 /usr/bin/python3.5 /var/www/mysite/autoGitPull.py > /var/www/mysite/autoGitPull.log
 ```
