@@ -1,5 +1,5 @@
 ---
-title: 设置开机自启动,定时执行"git pull"python脚本
+title: 设置定时执行"git pull"python脚本
 categories: linux
 tags: ["python", "脚本", "linux", "git"]
 ---
